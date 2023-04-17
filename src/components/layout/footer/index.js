@@ -15,6 +15,7 @@ const Footer = ( { footer } ) => {
 	const { copyrightText, footerMenuItems, sidebarOne, sidebarTwo, socialLinks } = footer || {};
 	const [ isMounted, setMount ] = useState( false );
 	
+	// console.log(footer);
 	
 	useEffect( () => {
 		setMount( true );
@@ -26,7 +27,7 @@ const Footer = ( { footer } ) => {
 				<div className="flex flex-wrap -mx-1 overflow-hidden text-white">
 					
 					{/*	Footer Menus*/ }
-					<div className="my-1 px-1 w-full overflow-hidden sm:w-full lg:w-1/2 xl:w-1/3">
+					<div className="mt-5 px-1 w-full overflow-hidden sm:w-full text-center">
 						{ ! isEmpty( footerMenuItems ) && isArray( footerMenuItems ) ? (
 							<ul>
 								{ footerMenuItems.map( menuItem => (
@@ -42,7 +43,7 @@ const Footer = ( { footer } ) => {
 				</div>
 				<div className="mb-8 mt-8 w-full flex flex-wrap">
 					{/*Copyright Text*/ }
-					<div className="w-full md:w-1/2 lg:w-1/4 text-white">
+					<div className="w-full text-center text-white">
 						{ copyrightText ? copyrightText : '© Pharma 2023' }
 					</div>
 					<div className="w-full lg:w-3/4 flex justify-end">
